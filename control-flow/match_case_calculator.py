@@ -1,8 +1,8 @@
 num1 = float(input("Enter the first number: "))
 num2 = float(input("Enter the second number: "))
-operation_tybe = input("Choose the operation (+, -, *, /): ")
+operation = input("Choose the operation (+, -, *, /): ")
 
-match operation_tybe:
+match operation:
     case "+":
         result = num1 + num2
     case "-":

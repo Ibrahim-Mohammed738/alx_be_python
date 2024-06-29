@@ -11,7 +11,7 @@ match operation_tybe:
         result = num1 * num2
     case "/":
         if num2 == 0:
-            print("cant divide by zero")
+            print("Cannot divide by zero.")
         else:
             result = num1 / num2
 

@@ -11,7 +11,7 @@ class Book:
         else:
             return False
 
-    def returning(self, title):
+    def return_book(self, title):
         if self._is_checked_out:
             self._is_checked_out = False
             return True
@@ -40,5 +40,5 @@ class Library:
     def return_book(self, title):
         for book in self.book:
             if book.title == title:
-                return book.returning()
+                return book.return_book()
             return False

@@ -4,14 +4,14 @@ class Book:
         self.author = author
         self._is_checked_out = _is_checked_out
 
-    def check_out(self, title):
+    def check_out(self):
         if not self._is_checked_out:
             self._is_checked_out = True
             return True
         else:
             return False
 
-    def return_book(self, title):
+    def return_book(self):
         if self._is_checked_out:
             self._is_checked_out = False
             return True
@@ -42,3 +42,4 @@ class Library:
             if book.title == title:
                 return book.return_book()
             return False
+

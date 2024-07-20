@@ -5,7 +5,8 @@ class Book:
 
     def __str__(self) -> str:
         pass
-    
+
+
 class EBook(Book):
     def __init__(self, title, author, file_size):
         super().__init__(title, author)
@@ -27,9 +28,10 @@ class Library:
 
     def list_books(self):
         for b in self.books:
-            if isinstance(b, Book):
-                print(f"Book: {b.title} by {b.author}")
-            elif isinstance(b, EBook):
-                print(f"EBook: {b.title} by {b.author}, File Size: {b.File_Size}KB")
+
+            if isinstance(b, EBook):
+                print(f"EBook: {b.title} by {b.author}, File Size: {b.file_size}KB")
             elif isinstance(b, PrintBook):
                 print(f"PrintBook: {b.title} by {b.author}, Page Count: {b.page_count}")
+            elif isinstance(b, Book):
+                print(f"Book: {b.title} by {b.author}")
